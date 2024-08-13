@@ -1,0 +1,49 @@
+From a23d1a57875ee1615b35dc6e02899846fbb4411e Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Fri, 9 Aug 2024 17:22:19 +0800
+Subject: [PATCH] install
+
+---
+ AA2QtEdit.desktop | 11 +++++++++++
+ ClassEditor.pro   |  9 +++++++++
+ 2 files changed, 20 insertions(+)
+ create mode 100644 AA2QtEdit.desktop
+
+diff --git a/AA2QtEdit.desktop b/AA2QtEdit.desktop
+new file mode 100644
+index 0000000..63bea97
+--- /dev/null
++++ b/AA2QtEdit.desktop
+@@ -0,0 +1,11 @@
++[Desktop Entry]
++Categories=Accessibility;Qt;Utility;
++Exec=AA2QtEdit
++Name=AA2QtEdit
++Name[zh_CN]=AA2QtEdit
++Icon=application-icon_16x16
++StartupNotify=false
++Terminal=false
++Type=Application
++GenericName=AA2QtEdit
++Version=2.0.1
+\ No newline at end of file
+diff --git a/ClassEditor.pro b/ClassEditor.pro
+index 0ecc3ca..25f1cf9 100644
+--- a/ClassEditor.pro
++++ b/ClassEditor.pro
+@@ -92,3 +92,12 @@ FORMS    += src/ui/mainwindow.ui \
+ RESOURCES += \
+     XML/datadef.qrc \
+     icons/icons.qrc
++
++
++target.path = $$PREFIX/bin
++desktop.files = AA2QtEdit.desktop
++desktop.path = $$PREFIX/share/applications/
++icons.path = $$PREFIX/share/icons
++icons.files = icons/application-icon_16x16.png
++
++INSTALLS += target desktop icons
+-- 
+2.43.4
+
